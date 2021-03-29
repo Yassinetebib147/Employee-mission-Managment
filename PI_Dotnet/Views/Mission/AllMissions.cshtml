@@ -1,0 +1,45 @@
+﻿@model PI_Dotnet.ViewModels.AllMissionViewModel 
+@{
+    ViewBag.Title = "AllMissions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Liste Des missions</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Zone</th>
+                        <th>Duree</th>
+                    </tr>
+                </thead>
+                
+
+
+                <tbody>
+        @foreach (var missions in Model.Missions)
+        {
+            <tr>
+                <td>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        @missions.nom_Mission
+                        <a href="http://localhost:8315/Mission/DetailsMission" class="btn btn-info btn-circle">
+                            <i class="fas fa-info-circle"></i>
+                        </a>                    </div>
+                
+                </td>
+                <td>@missions.zone_Mission</td>
+                <td>@missions.duree_Mission</td>
+            </tr>
+        }
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

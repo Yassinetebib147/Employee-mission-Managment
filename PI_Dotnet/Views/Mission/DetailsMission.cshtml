@@ -1,0 +1,46 @@
+﻿@model PI_Dotnet.Models.Mission
+@{
+    ViewBag.Title = "DetailsMission";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+
+    <h2>@Model.nom_Mission</h2>
+    
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card bg-warning text-white shadow">
+                    <div class="card-body">
+                        @Model.zone_Mission
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+   
+
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Description De la mission</h6>
+    </div>
+    <div class="card-body">
+        @Model.description_Mission
+    </div>
+</div>
+
+
+<div class="card shadow mb-4">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+        <h6 class="m-0 font-weight-bold text-primary"> Liste Frais De mission</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseCardExample">
+        <div class="card-body">
+            This is a collapsable card example using Bootstrap's built in collapse functionality. <strong>Click on the card header</strong> to see the card body collapse and expand!
+        </div>
+    </div>
+</div>
+</div>
